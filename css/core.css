@@ -151,6 +151,20 @@ header .fly a:hover{
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  margin-top: 3em;
+}
+#suggest{
+  position: absolute;
+  top: -webkit-calc(100% - 1.5em);
+  top: calc(100% - 1.5em);
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5em;
+  background-color: #eee;
+  color: #333;
+  z-index: 999;
+  display: none;
 }
 header h1{
   text-shadow: 0 3px 3px rgba(0, 0, 0, 1);
@@ -201,7 +215,7 @@ header .button > button{
 .cover input[class="search"]:focus{
   background: rgba(255, 255, 255, 1);
 }
-button[name="search"]{
+button#search{
   color: #333;
   height: 50px;
   line-height: 50px;
@@ -579,13 +593,14 @@ textarea.form-control:focus,
   margin-bottom: 20px;
   color: #666;
 }
+.contact h2.text-primary{
+  margin-bottom: 0;
+}
 .contact-head{
 	color: #858585;
 	font-size: 0.96em;
 	line-height: 1.5em;
-	text-align: center;
 	width: 60%;
-	margin: 0 auto;
 	padding: 0.8em 0 1em;
 }
 section.contact > div.container.well.well-lg{
@@ -839,10 +854,14 @@ input[id^="foto"]{
 .page-forum .head{
   position: relative;
 }
+.page-forum .hero{
+  margin-bottom: 0;
+}
 .page-forum i.icon{
   background: transparent;
   font-size: 12em;
   padding: .5em 0;
+  margin-left: .5em;
 }
 .page-forum .info{
   float: left;
@@ -882,4 +901,13 @@ input[id^="foto"]{
 }
 .page-forum .panel-body{
   padding: 0 .5em;
+}
+
+/*produk*/
+.produk table tr > td:last-child{
+  font-weight: bold;
+  color: #000;
+}
+.produk table tr > td:first-child{
+  color: #999;
 }

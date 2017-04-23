@@ -114,7 +114,7 @@
     width: 65%;
     display: table-cell;
   }
-  .featured .media .navbody .attention{
+  .featured .media .navbody .attention button{
     float: left;
     margin: 0;
   }
