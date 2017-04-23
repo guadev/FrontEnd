@@ -514,6 +514,9 @@ div.kategori h2{
   background-color: rgba(80, 145, 205,.7);
   border-color: transparent;
 }
+.featured .navbody span.text-primary{
+  font-weight: bolder;
+}
 
 /*Navbar*/
 nav#top-bar{
@@ -632,6 +635,15 @@ section.contact .login{
 }
 .contact p{
   font-size: 1em;
+}
+.confirmMessage{
+  position: relative;
+}
+#confirmMessage{
+  position: absolute;
+  left: 101%;
+  top: .1em;
+  width: 9em;
 }
 /*End of signUp*/
 
@@ -827,11 +839,6 @@ input[id^="foto"]{
 .upload input[name="transaksi"]:checked +label{
   background: rgb(78, 144, 25);
 }
-.upload .panelkiri .thumbnail.priority{
-  height: 15em;
-  line-height: 15em;
-  font-size: .8em;
-}
 .upload .thumbnail:hover, .upload label:hover{
   cursor: pointer;
 }
@@ -848,6 +855,9 @@ input[id^="foto"]{
 }
 .upload p.form-control{
   width: 100%;
+}
+#deskripsibuku{
+  min-height: 12.5em;
 }
 
 /*page-forum*/

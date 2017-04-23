@@ -65,8 +65,11 @@
                 </div>
                 <input type="text" placeholder="Username" class="form-control">
                 <input type="email" placeholder="e-Mail" class="form-control">
-                <input type="password" placeholder="Password" class="form-control">
-                <input type="password" placeholder="Konfirmasi Password" class="form-control">
+                <input type="password" id="pass1" placeholder="Password" class="form-control">
+                <div class="confirmMessage">
+                  <input type="password" id="pass2" placeholder="Konfirmasi Password" class="form-control" onkeyup="checkPass(); return false;">
+                  <div id="confirmMessage"></div>
+                </div>
                 <small class="block underline"><a href="#" class="text-warning">Untuk apa nomor identitas?</a></small>
                 <div class="col-md-3 no-padding">
                   <select class="form-control">
@@ -140,6 +143,23 @@
     <script src="../js/wow.min.js"></script>
     <script type="text/javascript">
       new WOW().init();
+
+      function checkPass(){
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        var message = document.getElementById('confirmMessage');
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+        if(pass1.value == pass2.value){
+          pass2.style.borderColor = goodColor;
+          message.style.color = goodColor;
+          message.innerHTML = "Password benar";
+        }else{
+          pass2.style.borderColor = badColor;
+          message.style.color = badColor;
+          message.innerHTML = "Password salah";
+        }
+      }
     </script>
     <script src="../js/bootstrap.min.js"></script>
   </body>
