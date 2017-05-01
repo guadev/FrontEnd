@@ -539,15 +539,19 @@ nav#top-bar li > a{
 nav#top-bar li > a:hover{
   border-bottom: 2px solid #aaa;
 }
+button.btn.btn-login{
+  background: transparent;
+  border-radius: 0;
+  color: black;
+  border-width: : 10px;
+  margin: 0;
+}
 /*Endnavbar*/
 
 /*Sign up*/
 .contact{
 	padding:1em 0 3em;
   position: relative;
-}
-.contact .well{
-  background-color: rgba(255, 255, 255, 0.5);
 }
 .text-box input, textarea.form-control,
 .text-box select.form-control{
@@ -644,6 +648,104 @@ section.contact .login{
   left: 101%;
   top: .1em;
   width: 9em;
+}
+.contact img[alt="Icon"]{
+  width: 50%;
+  height: auto;
+}
+.contact .foto input{
+  display: none;
+}
+.contact .foto{
+  position: relative;
+}
+.contact .foto .info::before{
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1em solid transparent;
+  border-bottom-color: #444;
+}
+
+.contact .foto .info{
+  position: absolute;
+  background: #444;
+  opacity: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  z-index: -2;
+  color: #eee;
+  border-radius: .4em;
+  padding: .8em;
+  padding-bottom: 0;
+  top: 120%;
+  font-size: .9em;
+  text-align: center;
+  -webkit-transform: rotateY(180deg) translateY(-2em);
+  -ms-transform: rotateY(180deg) translateY(-2em);
+  transform: rotateY(180deg) translateY(-2em);
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  -o-transform-origin: top;
+  transform-origin: top;
+}
+.contact .foto:hover .info{
+  opacity: 1;
+  -webkit-transform: rotateY(360deg) translateY(0);
+  -ms-transform: rotateY(360deg) translateY(0);
+  transform: rotateY(360deg) translateY(0);
+}
+.contact .foto label[for="profil"]{
+  font-size: .7em;
+  color: #fff;
+  font-weight: lighter;
+  border: .7em solid #fff;
+  box-shadow: 0 .3em .2em .3em rgba(200, 200, 200, 0.3);
+  box-sizing: content-box;
+  height: 9.5em;
+  width: 9.5em;
+  border-radius: 50%;
+  background: rgb(179, 166, 226);
+  line-height: 9.5em;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.contact .well{
+  border-color: rgb(130, 121, 237);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+}
+.contact #select{
+  padding-left: 1em;
+}
+.contact .well::before{
+  content: '';
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-filter: blur(50px);
+  -o-filter: blur(50px);
+  filter: blur(50px);
+}
+.contact .signup small{
+  margin-bottom: .3em;
+}
+.contact .row{
+  background: url('../assets/bgSign.svg') no-repeat;
+  background-size: cover;
+  position: relative;
 }
 /*End of signUp*/
 
@@ -888,7 +990,6 @@ input[id^="foto"]{
 }
 .page-forum ul li{
   margin-top: 1em;
-
 }
 .page-forum ul li a h4{
   line-height: 1.3em;
@@ -911,6 +1012,42 @@ input[id^="foto"]{
 }
 .page-forum .panel-body{
   padding: 0 .5em;
+}
+.page-forum .info span{
+  background: rgb(89, 157, 20);
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.page-forum .info p{
+  color: #af7710;
+}
+.page-sub-forum .img-wrapper{
+  height: 6em;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+
+  border: .2em solid #eee;
+}
+.page-sub-forum .ts,
+.page-sub-forum .buble{
+  background-color: #ddd;
+  border-radius: .5em;
+  padding: .8em 1em;
+}
+.page-sub-forum .buble{
+  margin-left: 1em;
+}
+.buble::before{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 1em solid transparent;
+  border-right-color:#ddd;
+  left: -1em;
+  top: 1.2em;
 }
 
 /*produk*/

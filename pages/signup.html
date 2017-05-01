@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="2"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Get The Book | Sign up</title>
 
@@ -48,14 +49,29 @@
       </div><!-- /.container-fluid -->
     </nav>
     <section class="first-content contact">
-      <div class="bg"></div>
-			<div class="container well well-lg first-content">
+			<div class="container first-content">
         <h2 class=" text-primary">Daftar</h2>
         <p class="contact-head ">Daftar dengan akun baru. Nikmati semua kemudahan
           yang ada, gratis!</p>
 				<div class="row contact-form">
 					<form class="first-content">
-            <div class="col-md-offset-7 col-md-5">
+            <div class="col-md-7">
+              <img src="../assets/bg.jpeg" class="center-block add-space" alt="Icon">
+              <div class="col-md-12 first-content no-padding">
+                <div class="col-md-8 no-padding">
+                  <p><b>Halo!</b> Tolong upload foto kamu agar kami dapat mengenali dengan mudah!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime beatae adipisci voluptates quod incidunt aperiam! Maiores esse amet itaque.</p>
+                </div>
+                <div class="col-md-4 foto no-padding">
+                  <input type="file" id="profil" required>
+                  <label for="profil">Upload foto</label>
+                  <div class="info">
+                    <p><b>Penting!</b> Unggah fotomu disini.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 well signup">
               <div class="col-md-12 text-box">
                 <div class="col-md-6 space space-left">
                   <input type="text" class="form-control" placeholder="First Name" >
@@ -70,9 +86,9 @@
                   <input type="password" id="pass2" placeholder="Konfirmasi Password" class="form-control" onkeyup="checkPass(); return false;">
                   <div id="confirmMessage"></div>
                 </div>
-                <small class="block underline"><a href="#" class="text-warning">Untuk apa nomor identitas?</a></small>
+                <small class="block underline first-content"><a href="#" class="text-warning">Untuk apa nomor identitas?</a></small>
                 <div class="col-md-3 no-padding">
-                  <select class="form-control">
+                  <select class="form-control" id="select">
                     <option value="KTP">KTP</option>
                     <option value="KTM">KTM</option>
                     <option value="SIM">SIM</option>
