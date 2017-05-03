@@ -13,6 +13,9 @@
   .offer button{
     float: right;
   }
+  #input{
+    width: 600px;
+  }
 }
 @media screen and (max-width:992px){
   h1{

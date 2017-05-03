@@ -519,9 +519,8 @@ div.kategori h2{
 }
 
 /*Navbar*/
-nav#top-bar{
-  padding-left: 15px;
-  padding-right: 15px;
+nav#home-bar{
+  background: #f1f1f1;
 }
 .navbar-hidden{
   display: none;
@@ -530,20 +529,23 @@ nav#top-bar{
   background: white;
   box-shadow: 0 1px 2px rgba(43, 43, 43, 0.3);
 }
-nav#top-bar li > a{
-  font-size:
+nav#home-bar li > a{
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-nav#top-bar li > a:hover{
-  border-bottom: 2px solid #aaa;
+nav#home-bar li > a:hover{
+  background: #f7f7f7;
+}
+#pad{
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 button.btn.btn-login{
   background: transparent;
-  border-radius: 0;
+  border-radius: .2em;
   color: black;
-  border-width: : 10px;
+  border-width: .1em;
   margin: 0;
 }
 /*Endnavbar*/
@@ -686,9 +688,9 @@ section.contact .login{
   top: 120%;
   font-size: .9em;
   text-align: center;
-  -webkit-transform: rotateY(180deg) translateY(-2em);
-  -ms-transform: rotateY(180deg) translateY(-2em);
-  transform: rotateY(180deg) translateY(-2em);
+  -webkit-transform: rotateY(180deg) translateY(-2em) scale(.5);
+  -ms-transform: rotateY(180deg) translateY(-2em) scale(.5);
+  transform: rotateY(180deg) translateY(-2em) scale(.5);
   -webkit-transform-origin: top;
   -moz-transform-origin: top;
   -ms-transform-origin: top;
@@ -697,21 +699,21 @@ section.contact .login{
 }
 .contact .foto:hover .info{
   opacity: 1;
-  -webkit-transform: rotateY(360deg) translateY(0);
-  -ms-transform: rotateY(360deg) translateY(0);
-  transform: rotateY(360deg) translateY(0);
+  -webkit-transform: rotateY(360deg) translateY(0) scale(1);
+  -ms-transform: rotateY(360deg) translateY(0) scale(1);
+  transform: rotateY(360deg) translateY(0) scale(1);
 }
 .contact .foto label[for="profil"]{
   font-size: .7em;
   color: #fff;
   font-weight: lighter;
   border: .7em solid #fff;
-  box-shadow: 0 .3em .2em .3em rgba(200, 200, 200, 0.3);
+  box-shadow: 0 .3em .2em .3em rgba(200, 200, 200, 0.3), inset 0 .2em 2px #777;
   box-sizing: content-box;
   height: 9.5em;
   width: 9.5em;
   border-radius: 50%;
-  background: rgb(179, 166, 226);
+  background: rgb(165, 149, 222);
   line-height: 9.5em;
   text-align: center;
   display: block;
@@ -729,6 +731,7 @@ section.contact .login{
 }
 .contact .well::before{
   content: '';
+  z-index: -99;
   position: absolute;
   background-color: rgba(255,255,255,.5);
   top: 0;
@@ -742,10 +745,14 @@ section.contact .login{
 .contact .signup small{
   margin-bottom: .3em;
 }
-.contact .row{
+section.contact .row{
   background: url('../assets/bgSign.svg') no-repeat;
   background-size: cover;
-  position: relative;
+}
+.contact input, .contact textarea, .contact #select{
+  border-left: .3em solid rgb(130, 121, 237);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /*End of signUp*/
 
@@ -763,10 +770,6 @@ footer p{
 footer a{
   line-height: 1.5em;
 }
-footer h4.text-center.text-muted{
-  position: relative;
-  top:-110px;
-}
 .dark{
   background: #212247;
   padding: 20px 0;
@@ -777,10 +780,35 @@ footer h4.text-center.text-muted{
 }
 .darklight h4{
   color: rgb(102, 166, 235);
+  position: relative;
+  top:-110px;
 }
 .fade-up{
   margin-top: -100px;
   margin-bottom:30px;
+}
+.dark p{
+  font-size:2em;
+  margin-top: .3em;
+  position: absolute;
+  color: #333566;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0;
+}
+.dark a:hover{
+  text-decoration: underline !important;
+}
+.dark a{
+  display: block;
+  color: #aaa;
+  position: relative;
+  z-index: 99;
+}
+.col-md-3.text-center{
+  padding-top: 2em;
 }
 .spec{
   border-radius: 50%;
@@ -807,6 +835,22 @@ footer h4.text-center.text-muted{
   -o-transition: .3s;
   transition: .3s;
 }
+.powered{
+  padding: 2em;
+  background: #111128;
+  color: #ccc;
+}
+.powered img{
+  display: inline-block;
+  height: 3em;
+  width: auto;
+}
+.pull-left img{
+  margin-right: 1em;
+}
+.dev{
+  top: .5em;
+}
 .help:hover{
   color: #eee;
   box-shadow: 0 3px 2px rgba(1, 1, 1, 0.3);
@@ -821,24 +865,6 @@ footer .about a{
 footer .about a:hover{
   color: #ddd;
   text-decoration: underline !important;
-}
-#logo{
-  padding: 40px;
-  -webkit-filter: grayscale(1) opacity(.3);
-  -o-filter: grayscale(1) opacity(.3);
-  filter: grayscale(1) opacity(.3);
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-#logo:hover{
-  -webkit-filter: grayscale(1) opacity(.7);
-  -o-filter: grayscale(1) opacity(.7);
-  filter: grayscale(1) opacity(.7);
-}
-footer img.guadev{
-  height: 100px;
-  width: auto;
 }
 /*endoffooter*/
 
