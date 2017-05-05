@@ -55,6 +55,32 @@
 
         <!-- category -->
     <section class="page-forum page-sub-forum">
+      <div id="asking" class="asking">
+        <div class="container">
+          <div class="row">
+            <a href="#close"><div id="close">X</div></a>
+            <div class="col-md-12 add-space">
+              <h2 class="text-primary">Tanya ke forum</h2>
+            </div>
+            <div class="col-md-8">
+              <input type="text" class="form-control" placeholder="Judul">
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" name="">
+                <option value="null">Kategori</option>
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Bisnis">Bisnis</option>
+                <option value="Hiburan">Hiburan</option>
+                <option value="Lain-lain">Lain-lain</option>
+              </select>
+            </div>
+            <div class="col-md-12 first-content text-right">
+              <textarea name="name" class="form-control">Dekskripsi dan tambahan keterangan</textarea>
+              <button class="btn btn-primary btn-lg text-right">Tanya</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-12 add-space garisbawah">
@@ -63,26 +89,28 @@
           </div>
           <div class="col-md-12 first-content">
             <div class="col-md-8 no-padding">
-              <div class="col-md-2 text-center">
+              <div class="col-md-2 text-center space space-left">
                 <div class="img-wrapper">
-                  <img src="../assets/bg.jpeg" class="img-responsive" alt="Profil Photo">
+                  <img src="../assets/bg.jpeg" class="img-responsive img-circle profilphoto" alt="Profil Photo">
                 </div>
-                <p>Nama akun</p>
-                <small>Diposting pada : <span class="text-primary">16 Januari 2016</span></small>
+                <p class="akun">Nama akun</p>
+                <small>Diposting pada :<br><span class="text-primary">16 Januari 2016</span></small>
               </div>
               <div class="col-md-10 ts">
-                <h4>Pertanyaannya</h4>
-                <small>Kategori: <a href="#">Ikeh</a></small>
+                <h4 class="judul">Pertanyaannya</h4>
+                <small class="kategori">Kategori: <a href="#" class="underline text-primary">Ikeh</a></small>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, molestias, inventore. Voluptate, consequatur, eveniet commodi vero maiores aperiam enim eius repudiandae ipsa, voluptatum laboriosam repellat libero beatae optio saepe amet.</p>
               </div>
-              <div class="block garisbawah first-content"><p>Jawaban</p></div>
+              <div class="clearfix"></div>
+              <div class="block garisbawah first-content"><p class="answer text-primary">Jawaban</p></div>
               <ul>
                 <li>
                   <div class="col-md-2 text-center">
                     <div class="img-wrapper">
-                      <img src="../assets/bg.jpeg" class="img-responsive" alt="Profil Photo">
+                      <img src="../assets/bg.jpeg" class="img-responsive img-circle profilphoto" alt="Profil Photo">
                     </div>
-                    <p>Nama akun</p>
+                    <p class="akun">Nama akun</p>
+                    <button type="button" class="form-control btn btn-default btn-md">Solved</button>
                   </div>
                   <div class="col-md-10 no-padding">
                     <div class="buble">
@@ -95,7 +123,7 @@
             <div class="col-md-4 floating-right">
               <div class="alert alert-warning">
                 <h4>Ingin bertanya?</h4>
-                <a href="#"><button type="button" class="btn btn-md btn-warning" name="button">Tanya aja</button></a>
+                <a href="#asking"><button type="button" class="btn btn-md btn-warning" name="button">Tanya aja</button></a>
               </div>
               <div class="panel panel-info">
                 <div class="panel-heading">
