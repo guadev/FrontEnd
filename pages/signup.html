@@ -58,21 +58,16 @@
             <div class="col-md-7">
               <img src="../assets/bg.jpeg" class="center-block add-space" alt="Icon">
               <div class="col-md-12 first-content no-padding">
-                <div class="col-md-8 no-padding">
-                  <p><b>Halo!</b> Tolong upload foto kamu agar kami dapat mengenali dengan mudah!</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime beatae adipisci voluptates quod incidunt aperiam! Maiores esse amet itaque.</p>
-                </div>
-                <div class="col-md-4 foto no-padding">
-                  <input type="file" id="profil" required>
-                  <label for="profil">Upload foto</label>
-                  <div class="info">
-                    <p><b>Penting!</b> Unggah fotomu disini.</p>
-                  </div>
-                </div>
+                <p><b>Halo!</b> Tolong upload foto kamu agar kami dapat mengenali dengan mudah!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime beatae adipisci voluptates quod incidunt aperiam! Maiores esse amet itaque.</p>
               </div>
             </div>
             <div class="col-md-5 well signup">
               <div class="col-md-12 text-box">
+                <div class="alert alert-warning">
+                  <p class="inline">Sudah punya akun?</p>
+                  <a href="#login.html" class="text-primary underline">Login disini.</a>
+                </div>
                 <div class="col-md-6 space space-left">
                   <input type="text" class="form-control" placeholder="First Name" >
                 </div>
@@ -166,11 +161,7 @@
         var message = document.getElementById('confirmMessage');
         var goodColor = "#66cc66";
         var badColor = "#ff6666";
-        if(pass1.value == pass2.value){
-          pass2.style.borderColor = goodColor;
-          message.style.color = goodColor;
-          message.innerHTML = "Password benar";
-        }else{
+        if(pass1.value != pass2.value){
           pass2.style.borderColor = badColor;
           message.style.color = badColor;
           message.innerHTML = "Password salah";

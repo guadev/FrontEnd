@@ -32,6 +32,9 @@ hr{
   margin-top: 10px;
   border-radius: 50px;
 }
+section i{
+  color: rgb(33, 194, 210) !important;
+}
 .inline{display: inline;}
 .block{display: block;}
 li{
@@ -100,7 +103,9 @@ li{
 section{
   position: relative;
 }
-
+.alert-default{
+  background: #eee;
+}
 select{
   background: rgb(165, 149, 222) !important;
   color: #fff !important;
@@ -109,7 +114,9 @@ option{
   background-color: white;
   color: #999;
 }
-
+ul.breadcrumb{
+  background: transparent;
+}
 /*header*/
 header{
   box-sizing: border-box;
@@ -231,10 +238,10 @@ button#search{
   border-bottom-left-radius: 0;
   color: white;
 }
-button[name="search"] p{
+button#search p{
   margin: 0 auto;
 }
-button[name="search"]:hover{
+button#search:hover{
   color: white;
   background: rgb(165, 149, 222);
   border: 2px solid rgb(165, 149, 222);
@@ -255,7 +262,7 @@ hr.hrcenter{
   background-color: rgba(12, 10, 27, 0.4);
   color: #ccc;
   position: absolute;
-  top: 21%;
+  top: 168px;
   bottom: 0;
   left: 50px;
   right: 70%;
@@ -520,7 +527,7 @@ div.kategori h2{
 
 /*Navbar*/
 nav#home-bar{
-  background: #f1f1f1;
+  background: #f9f9f9;
 }
 .navbar-hidden{
   display: none;
@@ -655,71 +662,6 @@ section.contact .login{
   width: 50%;
   height: auto;
 }
-.contact .foto input{
-  display: none;
-}
-.contact .foto{
-  position: relative;
-}
-.contact .foto .info::before{
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border: 1em solid transparent;
-  border-bottom-color: #444;
-}
-
-.contact .foto .info{
-  position: absolute;
-  background: #444;
-  opacity: 0;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-  z-index: -2;
-  color: #eee;
-  border-radius: .4em;
-  padding: .8em;
-  padding-bottom: 0;
-  top: 120%;
-  font-size: .9em;
-  text-align: center;
-  -webkit-transform: rotateY(180deg) translateY(-2em) scale(.5);
-  -ms-transform: rotateY(180deg) translateY(-2em) scale(.5);
-  transform: rotateY(180deg) translateY(-2em) scale(.5);
-  -webkit-transform-origin: top;
-  -moz-transform-origin: top;
-  -ms-transform-origin: top;
-  -o-transform-origin: top;
-  transform-origin: top;
-}
-.contact .foto:hover .info{
-  opacity: 1;
-  -webkit-transform: rotateY(360deg) translateY(0) scale(1);
-  -ms-transform: rotateY(360deg) translateY(0) scale(1);
-  transform: rotateY(360deg) translateY(0) scale(1);
-}
-.contact .foto label[for="profil"]{
-  font-size: .7em;
-  color: #fff;
-  font-weight: lighter;
-  border: .7em solid #fff;
-  box-shadow: 0 .3em .2em .3em rgba(200, 200, 200, 0.3), inset 0 .2em 2px #777;
-  box-sizing: content-box;
-  height: 9.5em;
-  width: 9.5em;
-  border-radius: 50%;
-  background: rgb(165, 149, 222);
-  line-height: 9.5em;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
 .contact .well{
   border-color: rgb(130, 121, 237);
   position: relative;
@@ -745,7 +687,9 @@ section.contact .login{
 .contact .signup small{
   margin-bottom: .3em;
 }
-section.contact .row{
+section.contact .row,
+section.upload .row
+{
   background: url('../assets/bgSign.svg') no-repeat;
   background-size: cover;
 }
@@ -978,14 +922,9 @@ input[id^="foto"]{
 .upload form input:not(input.text-right){
   margin-bottom: 1em;
 }
-.upload form textarea{
+.upload form textarea,
+.page-sub-forum .comment textarea{
   height: 6em;
-}
-.upload p.form-control{
-  width: 100%;
-}
-#deskripsibuku{
-  min-height: 12.5em;
 }
 
 /*page-forum*/
@@ -1145,15 +1084,27 @@ input[id^="foto"]{
 }
 .page-sub-forum .ts,
 .page-sub-forum .buble{
-  background-color: #ddd;
+  background-color: #eee;
   border-radius: .5em;
   padding: .8em 1em;
+  line-height: 1.6em;
 }
 .page-sub-forum .akun{
   font-size: 1.2em;
 }
 .page-sub-forum .buble{
   margin-left: 1em;
+}
+.page-sub-forum .coment{
+  color: #999;
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  background: #fff;
+  border-radius: .6em;
+  box-shadow: 0 .1em 3px rgba(0, 0, 0, 0.3);
+}
+.page-sub-forum small.time{
+  margin-top: .6em;
 }
 .buble::before{
   content: '';
@@ -1177,10 +1128,20 @@ input[id^="foto"]{
 }
 
 /*produk*/
+section.produk{
+  margin-top: 5em;
+}
 .produk table tr > td:last-child{
   font-weight: bold;
   color: #000;
 }
 .produk table tr > td:first-child{
   color: #999;
+}
+.produk .photo-wrapper{
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  height: 300px;
+  background-color: #eee;
 }
